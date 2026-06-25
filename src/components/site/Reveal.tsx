@@ -3,12 +3,11 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
 interface RevealProps {
   children: ReactNode;
   delay?: number;
-  as?: "div" | "section" | "li" | "article" | "header";
   className?: string;
 }
 
-export function Reveal({ children, delay = 0, as: As = "div", className = "" }: RevealProps) {
-  const ref = useRef<HTMLElement | null>(null);
+export function Reveal({ children, delay = 0, className = "" }: RevealProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -30,18 +29,15 @@ export function Reveal({ children, delay = 0, as: As = "div", className = "" }: 
     return () => io.disconnect();
   }, []);
 
-  const style: CSSProperties = {
-    transitionDelay: visible ? `${delay}ms` : "0ms",
-  };
+  const style: CSSProperties = { transitionDelay: visible ? `${delay}ms` : "0ms" };
 
   return (
-    // @ts-expect-error generic dynamic tag
-    <As
+    <div
       ref={ref}
       style={style}
       className={`${visible ? "reveal reveal-in" : "reveal"} ${className}`}
     >
       {children}
-    </As>
+    </div>
   );
 }
