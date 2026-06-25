@@ -77,22 +77,55 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "ZEVYN Technologies — Engineering Intelligent Digital Experiences" },
+      {
+        name: "description",
+        content:
+          "ZEVYN builds high-converting landing pages, AI automation, CRM systems, SEO, and secure web platforms for ambitious companies worldwide.",
+      },
+      { name: "author", content: "ZEVYN Technologies" },
+      { name: "theme-color", content: "#FBFBFB" },
+      { property: "og:site_name", content: "ZEVYN Technologies" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:title", content: "ZEVYN Technologies" },
+      {
+        property: "og:description",
+        content:
+          "Engineering intelligent digital experiences — landing pages, AI integration, SEO, CRM, and security.",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ZEVYN Technologies" },
+      {
+        name: "twitter:description",
+        content:
+          "Engineering intelligent digital experiences — landing pages, AI integration, SEO, CRM, and security.",
+      },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "ZEVYN Technologies",
+          url: "/",
+          description:
+            "ZEVYN Technologies engineers high-converting landing pages, AI automation, CRM, SEO, and security solutions.",
+          sameAs: [],
+        }),
       },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
