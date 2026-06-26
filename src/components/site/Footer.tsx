@@ -39,7 +39,7 @@ export function Footer() {
           <div className="md:col-span-5">
             <Link to="/" className="flex items-center gap-2 group">
           <img
-    src="public/company logo.png"
+    src="/company logo.png"
     alt="ZEVYN Logo"
     className="h-8 w-8 object-contain transition-transform group-hover:rotate-3"
   />
