@@ -71,183 +71,186 @@ const services = [
   {
     icon: Zap,
     title: "Landing Page Development",
-    desc: "High-converting, lightning-fast landing pages engineered for measurable ROI.",
-    bullets: ["A/B-tested layouts", "Sub-second load times", "Edge-rendered"],
+    desc: "We design and develop high-performance landing pages that transform visitors into qualified leads and paying customers through strategic design, persuasive content, and lightning-fast performance.",
+    bullets: ["Conversion-focused UI/UX", "Mobile-first responsive design", "Lightning-fast loading speed"],
     tag: "Most popular",
   },
   {
     icon: Bot,
     title: "AI Integration",
-    desc: "Custom LLM agents and workflow automation that compress operational cost.",
-    bullets: ["RAG pipelines", "Workflow automation", "Human-in-the-loop"],
+    desc: "Leverage the power of artificial intelligence to automate workflows, enhance customer experiences, and streamline business operations with custom AI solutions.",
+    bullets: ["AI Chatbots & Virtual Assistants", "Workflow automation", "Custom AI Integrations"],
   },
   {
     icon: Megaphone,
     title: "Digital Marketing",
-    desc: "Full-funnel growth campaigns with measurable attribution across every channel.",
-    bullets: ["Paid + organic", "Attribution modeling", "Creative testing"],
+    desc: "Grow your brand with data-driven marketing strategies that increase visibility, generate quality leads, and maximize return on investment across every digital channel.",
+    bullets: ["Paid + organic", "Social Media Marketing", "Content & Email Marketing"],
   },
   {
     icon: Users,
     title: "CRM Solutions",
-    desc: "Custom dashboards and automated pipelines that sync sales and marketing.",
-    bullets: ["HubSpot · Salesforce", "Lead routing", "Lifecycle automation"],
+    desc: "Build stronger customer relationships with powerful CRM systems that automate sales, organize customer data, and improve team productivity.",
+    bullets: ["CRM Implementation", "Sales Automation", "Customer Analytics"],
   },
   {
     icon: Search,
     title: "SEO Optimization",
-    desc: "Data-driven search strategy and technical SEO that dominates the SERP.",
-    bullets: ["Technical audits", "Topic clusters", "Authority building"],
+    desc: "Improve your online visibility with comprehensive SEO strategies that help your business rank higher, attract organic traffic, and generate long-term growth.",
+    bullets: ["Technical audits", "On-Page Optimization", "Keyword & Content Strategy"],
   },
   {
     icon: Lock,
     title: "Security Audits",
-    desc: "Enterprise-grade security reviews to keep customer data protected and compliant.",
-    bullets: ["OWASP review", "Pen-test ready", "SOC 2 prep"],
+    desc: "Protect your business with comprehensive security audits designed to identify vulnerabilities, strengthen defenses, and ensure compliance with industry standards.",
+    bullets: ["OWASP review", "Pen-test ready", "Vulnerability Assessment"],
   },
 ] as const;
 
 const process = [
   {
     n: "01",
-    title: "Discovery",
-    desc: "Audit current workflows, identify revenue leaks, and align on measurable goals.",
+    title: "Discovery & Consultation",
+    desc: "We begin by understanding your business, goals, target audience, and challenges. Through strategic consultation, we identify opportunities and create a roadmap tailored to your growth objectives.",
   },
   {
     n: "02",
-    title: "Strategy",
-    desc: "Architect a system: information design, conversion math, and engineering scope.",
+    title: "Strategy & Planning",
+    desc: "Our team designs a comprehensive digital strategy, defining the user experience, technology stack, marketing approach, and project milestones to ensure successful execution.",
   },
   {
     n: "03",
-    title: "Development",
-    desc: "Ship in weekly sprints with daily deploys, instrumentation, and QA gates.",
+    title: "Design & Development",
+    desc: "We craft modern, high-performance digital solutions using the latest technologies, focusing on exceptional user experience, scalability, security, and business performance.",
   },
   {
     n: "04",
-    title: "Launch & Scale",
-    desc: "Optimize against live data, expand growth loops, and harden for global scale.",
+    title: "Launch, Optimize & Grow",
+    desc: "After deployment, we continuously monitor, optimize, and improve your digital platform using analytics, SEO, and performance insights to maximize long-term business growth.",
   },
 ] as const;
 
 const projects = [
   {
-    category: "Fintech SaaS",
-    title: "Accelerating Pipeline Velocity for QuantFlow",
+    category: "Landing Page Development",
+    title: "High-Converting SaaS Landing Page",
     description:
-      "Re-architected acquisition funnel and shipped an AI lead-qualifier that compressed sales cycles.",
-    metric: { value: "+137%", label: "Leads Generated" },
-    secondary: { value: "4.2s", label: "Avg Load Speed" },
-    tech: ["React", "Edge", "LLM"],
+      "Designed and developed a conversion-focused landing page that increased lead generation through strategic UI/UX, performance optimization, and compelling CTAs.",
+    metric: { value: "+185%", label: "Conversion Rate" },
+    secondary: { value: "0.9s", label: "Page Load Time" },
+    tech: ["React", "Tailwind CSS", "TypeScript"],
   },
   {
-    category: "Logistics AI",
-    title: "Automating Operations at Northwind",
+    category: "AI Integration",
+    title: "AI Customer Support Assistant",
     description:
-      "Designed an AI agent network that automated triage, freeing 8 hours per operator each week.",
-    metric: { value: "40%", label: "Faster Operations" },
-    secondary: { value: "8h", label: "Saved per Week" },
-    tech: ["LangGraph", "Python", "RAG"],
+      "Built an intelligent AI chatbot capable of automating customer support, lead qualification, and appointment scheduling for businesses.",
+    metric: { value: "75%", label: "Support Automated" },
+    secondary: { value: "24/7", label: "Availability" },
+    tech: ["OpenAI", "Node.js", "LangChain"],
   },
   {
-    category: "B2B SaaS · SEO",
-    title: "Capturing Search Demand for Lumina",
+    category: "SEO & Digital Marketing",
+    title: "SEO Growth Campaign",
     description:
-      "Built a programmatic SEO engine and rebuilt the marketing site for a measurable organic lift.",
-    metric: { value: "+280%", label: "Organic Traffic" },
-    secondary: { value: "920", label: "Pages Indexed" },
-    tech: ["Next.js", "Sanity", "Schema"],
+      "Implemented technical SEO, content optimization, and performance improvements that significantly increased organic visibility and search rankings.",
+    metric: { value: "+310%", label: "Organic Traffic" },
+    secondary: { value: "Top 3", label: "Keyword Rankings" },
+    tech: ["Next.js", "Schema.org", "Google Analytics"],
   },
   {
-    category: "Revenue Ops",
-    title: "Unifying Sales & Marketing for Aether",
+    category: "CRM & Business Automation",
+    title: "Custom CRM Platform",
     description:
-      "Replatformed the CRM with custom attribution and pipeline automations across 12 markets.",
-    metric: { value: "3×", label: "Sales Pipeline" },
-    secondary: { value: "12", label: "Markets Live" },
-    tech: ["HubSpot", "Snowflake", "dbt"],
+      "Developed a custom CRM system with lead tracking, sales automation, customer management, and analytics dashboards for business operations.",
+    metric: { value: "60%", label: "Productivity Boost" },
+    secondary: { value: "100%", label: "Lead Tracking" },
+    tech: ["React", "Node.js", "MongoDB"],
   },
 ] as const;
 
+
 const stats = [
-  { value: 150, suffix: "+", label: "Projects shipped" },
+  { value: 25, suffix: "+", label: "Projects shipped" },
   { value: 95, suffix: "%", label: "Client satisfaction" },
-  { value: 40, suffix: "+", label: "Active partners" },
+  { value: 10, suffix: "+", label: "Active partners" },
   { value: 98, suffix: "%", label: "Performance score" },
 ] as const;
 
-const testimonials = [
-  {
-    quote:
-      "ZEVYN rebuilt our acquisition system end to end. We shipped in six weeks and saw a 137% jump in qualified leads.",
-    name: "Priya Nair",
-    role: "VP Growth, QuantFlow",
-  },
-  {
-    quote:
-      "The AI workflow they integrated paid for itself in the first month. Operations are genuinely faster and calmer.",
-    name: "Marcus Lin",
-    role: "COO, Northwind Logistics",
-  },
-  {
-    quote:
-      "Easily the most rigorous engineering team we've partnered with. The work feels like it came from a product company.",
-    name: "Sara Reyes",
-    role: "Head of Brand, Lumina",
-  },
-  {
-    quote:
-      "Conversion-focused thinking on every screen. Our trial-to-paid lifted 31% without changing the offer.",
-    name: "Daniel Okafor",
-    role: "Founder, Aether",
-  },
-] as const;
+// const testimonials = [
+//   {
+//     quote:
+//       "ZEVYN rebuilt our acquisition system end to end. We shipped in six weeks and saw a 137% jump in qualified leads.",
+//     name: "Priya Nair",
+//     role: "VP Growth, QuantFlow",
+//   },
+//   {
+//     quote:
+//       "The AI workflow they integrated paid for itself in the first month. Operations are genuinely faster and calmer.",
+//     name: "Marcus Lin",
+//     role: "COO, Northwind Logistics",
+//   },
+//   {
+//     quote:
+//       "Easily the most rigorous engineering team we've partnered with. The work feels like it came from a product company.",
+//     name: "Sara Reyes",
+//     role: "Head of Brand, Lumina",
+//   },
+//   {
+//     quote:
+//       "Conversion-focused thinking on every screen. Our trial-to-paid lifted 31% without changing the offer.",
+//     name: "Daniel Okafor",
+//     role: "Founder, Aether",
+//   },
+// ] as const;
 
 const why = [
-  { icon: Zap, title: "Conversion-first", desc: "Every layout earns its place against a measurable goal." },
-  { icon: Gauge, title: "Performance optimized", desc: "Sub-second loads. Lighthouse 95+ as a baseline." },
-  { icon: Bot, title: "AI-ready architecture", desc: "Built to plug into the LLM stack you'll use next year." },
-  { icon: Search, title: "SEO from day one", desc: "Schema, semantics, and content design built in." },
-  { icon: Lock, title: "Enterprise security", desc: "OWASP-aligned reviews and SOC 2-ready infrastructure." },
-  { icon: LineChart, title: "Measurable outcomes", desc: "Every engagement ties to a number leadership cares about." },
+  { icon: Zap, title: "Innovation-Driven Solutions", desc: "We combine creativity, strategy, and cutting-edge technology to deliver digital solutions that help businesses stay ahead of the competition." },
+  { icon: Gauge, title: "Performance optimized", desc: "Every website and application is optimized for speed, responsiveness, and exceptional user experience to maximize business results." },
+  { icon: Bot, title: "AI-ready architecture", desc: "From intelligent automation to AI integrations, we build future-ready solutions that improve productivity and customer engagement." },
+  { icon: Search, title: "SEO from day one", desc: "Every project is developed with technical SEO, performance optimization, and search visibility in mind to ensure sustainable online growth." },
+  { icon: Lock, title: "Security & Reliability", desc: "OWASP-aligned reviews and We follow modern security best practices, secure coding standards, and regular security assessments to protect your digital assets." },
+  { icon: LineChart, title: "Long-Term Partnership", desc: "Our relationship doesn't end after launch. We provide continuous support, optimization, maintenance, and strategic improvements to help your business grow." },
 ] as const;
 
 const faqs = [
   {
-    q: "How fast can ZEVYN ship a landing page?",
-    a: "Most conversion-focused landing pages launch in 2–3 weeks from kickoff, including copy, design, build, instrumentation, and QA.",
+    q: "What services does ZEVYN Technologies provide?",
+    a: "We specialize in Landing Page Development, AI Integration, Digital Marketing, CRM Solutions, SEO Optimization, Security Audits, and Custom Web Development tailored to your business goals.",
   },
   {
-    q: "What does an AI integration engagement look like?",
-    a: "We scope a use case, ship a working pilot in 4–6 weeks, then harden it for production with evaluation, observability, and rollback paths.",
+    q: "How long does it take to complete a project?",
+    a: "Project timelines depend on the scope. Landing pages typically take 1–3 weeks, while custom web applications and AI solutions may require 4–12 weeks.",
   },
   {
-    q: "Do you handle SEO for existing sites or only new builds?",
-    a: "Both. We run a full technical audit, prioritize fixes by traffic impact, and ship rewrites alongside topical content strategy.",
+    q: "Do you build custom websites or use templates?",
+    a: "Every project is custom-designed and developed to match your brand identity, business objectives, and user experience requirements. We don't rely on generic templates.",
   },
   {
-    q: "Which CRM platforms do you work with?",
-    a: "HubSpot and Salesforce are our primary stacks, with custom Snowflake/dbt pipelines when reporting requirements demand it.",
+    q: "Can you redesign our existing website?",
+    a: "Yes. We can modernize your current website by improving its design, performance, SEO, security, and overall user experience while preserving your existing content if needed.",
   },
   {
-    q: "How do you approach security and compliance?",
-    a: "We follow OWASP guidance, run dependency and infrastructure scans on every release, and produce SOC 2-ready documentation as you grow.",
+    q: "Do you provide SEO and digital marketing services?",
+    a: "Absolutely. We offer technical SEO, on-page optimization, content strategy, Google Business Profile optimization, paid advertising, and digital marketing campaigns to increase your online visibility.",
   },
   {
-    q: "Do you offer ongoing maintenance after launch?",
-    a: "Yes. Retainers cover performance monitoring, conversion experiments, content updates, and infrastructure hardening.",
+    q: "Do you provide maintenance and support after launch?",
+    a: "Yes. We offer ongoing maintenance, security updates, performance monitoring, feature enhancements, backups, and technical support to keep your website running smoothly.",
   },
   {
-    q: "What does pricing look like?",
-    a: "Engagements typically range from focused $8–15k landing pages to enterprise programs in the six-figure range. Every quote is fixed-scope.",
+    q: "Can you integrate AI into my existing business?",
+    a: "Yes. We develop AI-powered chatbots, workflow automation, intelligent assistants, and custom AI solutions that integrate seamlessly with your existing systems.",
   },
   {
-    q: "Where is the ZEVYN team based?",
-    a: "ZEVYN operates as a distributed senior team across North America, Europe, and South Asia, with overlap across all major time zones.",
+    q: "How do I get started with ZEVYN?",
+    a: "Simply contact us through our website or book a free consultation. We'll discuss your requirements, understand your goals, and provide a customized proposal tailored to your business.",
   },
 ] as const;
 
-const logos = ["FORGE", "QUANTUM", "NEXUS", "LUMINA", "STRATA", "AETHER", "NORTHWIND", "VERTEX"] as const;
+
+
+const logos = ["Onyx Technologies", "rotract club of texcity"] as const;
 
 /* ----------------------------- Page ----------------------------- */
 
@@ -262,7 +265,7 @@ function HomePage() {
         <Process />
         <FeaturedProjects />
         <Stats />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <WhyZevyn />
         <FAQ />
         <FinalCTA />
@@ -280,8 +283,8 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-grid bg-grid-fade" aria-hidden />
       <div className="absolute inset-x-0 top-0 -z-10 h-[640px] bg-mesh animate-mesh opacity-70" aria-hidden />
 
-      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-12 lg:gap-10">
-        <div className="lg:col-span-7">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="flex flex-col items-center text-center">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-foreground backdrop-blur">
               <span className="relative flex size-2">
@@ -293,16 +296,16 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
-              Landing Pages That Turn{" "}
+            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-center md:text-7xl">
+              Accelerate Your Business With {" "}
               <span className="relative inline-block">
-                Visitors
+                Intelligent
                 <span
                   aria-hidden
                   className="absolute inset-x-0 bottom-1 -z-10 h-3 rounded-sm bg-brand-sky"
                 />
               </span>{" "}
-              Into Customers.
+              Solutions
             </h1>
           </Reveal>
 
@@ -346,7 +349,7 @@ function Hero() {
           </Reveal>
         </div>
 
-        <div className="relative lg:col-span-5">
+        {/* <div className="relative lg:col-span-5">
           <Reveal delay={200}>
             <div className="relative">
               <div
@@ -376,7 +379,7 @@ function Hero() {
               </div>
             </div>
           </Reveal>
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -677,60 +680,60 @@ function Stats() {
     </section>
   );
 }
+// testimonials are currently commented out, but you can uncomment the following code to display them when needed.
+// function Testimonials() {
+//   return (
+//     <section className="py-24 md:py-32">
+//       <div className="mx-auto max-w-7xl px-6">
+//         <div className="max-w-2xl">
+//           <Reveal>
+//             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+//               Testimonials
+//             </span>
+//             <h2 className="mt-3 font-display text-4xl font-bold leading-tight md:text-5xl">
+//               Leaders trust ZEVYN with their growth.
+//             </h2>
+//           </Reveal>
+//         </div>
 
-function Testimonials() {
-  return (
-    <section className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-2xl">
-          <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-              Testimonials
-            </span>
-            <h2 className="mt-3 font-display text-4xl font-bold leading-tight md:text-5xl">
-              Leaders trust ZEVYN with their growth.
-            </h2>
-          </Reveal>
-        </div>
-
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 60}>
-              <figure className="flex h-full flex-col rounded-3xl border border-border bg-card p-8">
-                <div className="flex items-center gap-1 text-foreground" aria-label="Five stars">
-                  {Array.from({ length: 5 }).map((_, j) => (
-                    <svg key={j} viewBox="0 0 20 20" className="size-4 fill-current" aria-hidden>
-                      <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" />
-                    </svg>
-                  ))}
-                </div>
-                <blockquote className="mt-5 flex-1 font-display text-lg leading-snug text-foreground">
-                  “{t.quote}”
-                </blockquote>
-                <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                  <span
-                    aria-hidden
-                    className="grid size-10 place-items-center rounded-full bg-brand-sky font-display text-sm font-bold text-foreground"
-                  >
-                    {t.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .slice(0, 2)
-                      .join("")}
-                  </span>
-                  <div>
-                    <div className="text-sm font-semibold">{t.name}</div>
-                    <div className="text-xs text-muted-foreground">{t.role}</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+//         <div className="mt-14 grid gap-5 md:grid-cols-2">
+//           {testimonials.map((t, i) => (
+//             <Reveal key={t.name} delay={i * 60}>
+//               <figure className="flex h-full flex-col rounded-3xl border border-border bg-card p-8">
+//                 <div className="flex items-center gap-1 text-foreground" aria-label="Five stars">
+//                   {Array.from({ length: 5 }).map((_, j) => (
+//                     <svg key={j} viewBox="0 0 20 20" className="size-4 fill-current" aria-hidden>
+//                       <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" />
+//                     </svg>
+//                   ))}
+//                 </div>
+//                 <blockquote className="mt-5 flex-1 font-display text-lg leading-snug text-foreground">
+//                   “{t.quote}”
+//                 </blockquote>
+//                 <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
+//                   <span
+//                     aria-hidden
+//                     className="grid size-10 place-items-center rounded-full bg-brand-sky font-display text-sm font-bold text-foreground"
+//                   >
+//                     {t.name
+//                       .split(" ")
+//                       .map((n) => n[0])
+//                       .slice(0, 2)
+//                       .join("")}
+//                   </span>
+//                   <div>
+//                     <div className="text-sm font-semibold">{t.name}</div>
+//                     <div className="text-xs text-muted-foreground">{t.role}</div>
+//                   </div>
+//                 </figcaption>
+//               </figure>
+//             </Reveal>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 function WhyZevyn() {
   return (
@@ -742,7 +745,7 @@ function WhyZevyn() {
               Why ZEVYN
             </span>
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight md:text-5xl">
-              The engineering bar leadership expects.
+              Why Businesses Choose ZEVYN
             </h2>
           </Reveal>
         </div>

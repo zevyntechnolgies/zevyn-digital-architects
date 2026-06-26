@@ -6,11 +6,11 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — A Senior Product & Engineering Team | ZEVYN" },
+      { title: "Building Digital Solutions That Create Real Business Impact | ZEVYN" },
       {
         name: "description",
         content:
-          "ZEVYN is a distributed team of senior designers, engineers, and growth operators building digital systems for ambitious companies.",
+          "ZEVYN is a distributed team of senior designers, engineers, and growth operators building digital systems that create measurable business outcomes.",
       },
       { property: "og:title", content: "About ZEVYN Technologies" },
       {
@@ -25,24 +25,27 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
+
 const values = [
   {
-    title: "Outcomes over output",
-    desc: "We measure ourselves against revenue, not deliverables. Every engagement ties to a number.",
+    title: "Client-Centric Approach",
+    desc: "We put your business goals first, creating tailored digital solutions that deliver measurable value and long-term success.",
   },
   {
-    title: "Senior by default",
-    desc: "Every project is led by people who've shipped at the highest level. No silent juniors learning on your bill.",
+    title: "Innovation & Technology",
+    desc: "By leveraging modern technologies, AI, and industry best practices, we build scalable, future-ready digital experiences.",
   },
   {
-    title: "Engineering rigor",
-    desc: "Performance budgets, observability, and rollback paths are non-negotiable — not afterthoughts.",
+    title: "Quality & Performance",
+    desc: "Every website and application is optimized for speed, security, accessibility, and exceptional user experience from day one.",
   },
   {
-    title: "Bias to ship",
-    desc: "We move in weekly increments because compounding learning beats perfect launches.",
+    title: "Long-Term Partnership",
+    desc: "We believe in lasting relationships, providing continuous support, maintenance, and strategic guidance as your business grows.",
   },
 ];
+
+
 
 function AboutPage() {
   return (
@@ -55,12 +58,10 @@ function AboutPage() {
               About ZEVYN
             </span>
             <h1 className="mt-4 font-display text-5xl font-bold leading-[1.05] md:text-7xl">
-              A senior team, engineered for outcomes.
+              Building Digital Solutions That Create Real Business Impact
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              ZEVYN is a distributed group of designers, engineers, and growth operators who
-              have shipped at Stripe-, Linear-, and Vercel-class product teams. We bring that
-              bar to companies who need it next.
+              ZEVYN Technologies is a modern digital solutions agency dedicated to helping businesses grow through innovative technology, intelligent automation, and exceptional digital experiences. We combine creativity, strategy, and engineering to build products that deliver measurable results.
             </p>
           </Reveal>
         </section>
@@ -81,9 +82,9 @@ function AboutPage() {
         <section className="mx-auto mt-24 max-w-7xl px-6">
           <div className="grid gap-12 rounded-[36px] border border-border bg-brand-subtle p-10 md:grid-cols-3 md:p-16">
             {[
-              { v: "12+", l: "Years average team experience" },
-              { v: "9", l: "Countries we operate from" },
-              { v: "100%", l: "Senior-led delivery" },
+             { v: "100%", l: "Custom Solutions" },
+{ v: "24/7", l: "Technical Support" },
+{ v: "AI", l: "Powered Solutions" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display text-5xl font-bold">{s.v}</div>

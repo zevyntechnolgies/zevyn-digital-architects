@@ -4,6 +4,7 @@ import { ArrowRight, Check, Mail, MapPin } from "lucide-react";
 import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
 import { Reveal } from "../components/site/Reveal";
+import { submitContact } from "@/lib/contact.functions";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -27,7 +28,45 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState("");
   const [sent, setSent] = useState(false);
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+
+  setLoading(true);
+  setError("");
+
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  try {
+    await submitContact({
+      data: {
+        name: formData.get("name") as string,
+        email: formData.get("email") as string,
+        company: formData.get("company") as string,
+        website: formData.get("website") as string,
+        projectType: formData.get("projectType") as string,
+        message: formData.get("message") as string,
+      },
+    });
+
+    form.reset();
+    setSent(true);
+    
+  } catch (err) {
+    setError(
+      err instanceof Error
+        ? err.message
+        : "Something went wrong."
+    );
+  } finally {
+    setLoading(false);
+    
+  }
+}
   return (
     <div className="min-h-dvh bg-background">
       <Navbar />
@@ -39,11 +78,11 @@ function ContactPage() {
                 Contact
               </span>
               <h1 className="mt-4 font-display text-5xl font-bold leading-[1.05] md:text-6xl">
-                Let's engineer your next growth chapter.
+                Let's Design your next growth chapter.
               </h1>
               <p className="mt-6 text-lg text-muted-foreground">
-                Tell us about your project. We reply within one business day with a clear next
-                step — either a strategy call or a written proposal.
+                Tell us about your project. We reply within one business day with a clear next step
+                — either a strategy call or a written proposal.
               </p>
 
               <ul className="mt-10 space-y-5 text-sm">
@@ -52,7 +91,7 @@ function ContactPage() {
                     <Mail className="size-4" />
                   </span>
                   <div>
-                    <div className="font-semibold">hello@zevyn.tech</div>
+                    <div className="font-semibold">Team@zevyn.tech</div>
                     <div className="text-muted-foreground">For new projects & partnerships</div>
                   </div>
                 </li>
@@ -61,8 +100,8 @@ function ContactPage() {
                     <MapPin className="size-4" />
                   </span>
                   <div>
-                    <div className="font-semibold">Distributed worldwide</div>
-                    <div className="text-muted-foreground">Hubs across NA, EU, and South Asia</div>
+                    <div className="font-semibold">Location</div>
+                    <div className="text-muted-foreground">We operate in Coimbatore</div>
                   </div>
                 </li>
               </ul>
@@ -72,10 +111,7 @@ function ContactPage() {
           <div className="lg:col-span-7">
             <Reveal delay={120}>
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSent(true);
-                }}
+                onSubmit={handleSubmit}
                 className="rounded-3xl border border-border bg-card p-8 shadow-elegant md:p-10"
               >
                 {sent ? (
@@ -95,8 +131,33 @@ function ContactPage() {
                     <Field label="Company" name="company" />
                     <Field label="Website" name="website" />
                     <div className="md:col-span-2">
-                      <Field label="Project type" name="type" placeholder="Landing page, AI, SEO, CRM…" />
+                      <label className="block">
+                        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                          Project Type
+                        </span>
+
+                        <select
+                          name="projectType"
+                          required
+                          defaultValue=""
+                          className="mt-2 h-11 w-full rounded-xl border border-border bg-background px-4 text-sm outline-none focus:ring-2 focus:ring-ring/40"
+                        >
+                          <option value="" disabled>
+                            Select a service
+                          </option>
+                          <option value="Landing Page Development">Landing Page Development</option>
+                          <option value="AI Integration">AI Integration</option>
+                          <option value="Digital Marketing">Digital Marketing</option>
+                          <option value="CRM Solutions">CRM Solutions</option>
+                          <option value="SEO Optimization">SEO Optimization</option>
+                          <option value="Security Audit">Security Audit</option>
+                          <option value="Custom Web Development">Custom Web Development</option>
+                          <option value="UI/UX Design">UI/UX Design</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </label>
                     </div>
+
                     <div className="md:col-span-2">
                       <label className="block">
                         <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
@@ -114,11 +175,18 @@ function ContactPage() {
                       <p className="text-xs text-muted-foreground">
                         By submitting, you agree to be contacted about your project.
                       </p>
+                      {error && (
+  <div className="md:col-span-2 rounded-xl border border-red-300 bg-red-50 p-3 text-sm text-red-600">
+    {error}
+  </div>
+)}
                       <button
                         type="submit"
-                        className="inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-elegant transition-transform hover:-translate-y-px"
+                        disabled={loading}
+                        
+                        className="inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-elegant transition-transform hover:-translate-y-px disabled:cursor-not-allowed"
                       >
-                        Send message
+                        {loading ? "Sending..." : "Send Message"}
                         <ArrowRight className="size-4" />
                       </button>
                     </div>

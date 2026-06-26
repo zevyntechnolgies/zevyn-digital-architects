@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const cols = [
   {
@@ -37,16 +37,20 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-20 pb-10">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Link to="/" className="flex items-center gap-2">
-              <span aria-hidden className="grid size-8 place-items-center rounded-lg bg-brand-ink text-background">
-                <span className="size-3 rounded-sm bg-brand-sky" />
-              </span>
-              <span className="font-display text-lg font-bold tracking-tight">ZEVYN</span>
-            </Link>
+            <Link to="/" className="flex items-center gap-2 group">
+          <img
+    src="public/company logo.png"
+    alt="ZEVYN Logo"
+    className="h-8 w-8 object-contain transition-transform group-hover:rotate-3"
+  />
+          <span className="font-display text-lg font-bold tracking-tight">Zevyn Technologies</span>
+        </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Engineering intelligent digital experiences for the next generation of enterprise leaders.
+              ZEVYN helps businesses grow with conversion-focused landing pages,
+              AI-powered automation, SEO optimization, digital marketing, and
+              scalable web solutions.
             </p>
-            <form
+            {/* <form
               onSubmit={(e) => e.preventDefault()}
               className="mt-6 flex w-full max-w-sm overflow-hidden rounded-full border border-border bg-card pl-5 pr-1"
             >
@@ -63,7 +67,7 @@ export function Footer() {
               >
                 Subscribe
               </button>
-            </form>
+            </form> */}
           </div>
 
           {cols.map((c) => (
@@ -89,9 +93,9 @@ export function Footer() {
             </h4>
             <div className="mt-5 flex gap-2">
               {[
-                { href: "#", label: "LinkedIn", Icon: Linkedin },
-                { href: "#", label: "Twitter", Icon: Twitter },
-                { href: "#", label: "GitHub", Icon: Github },
+                { href: "https://www.linkedin.com/in/zevyn-technolgies-b2a029417/", label: "LinkedIn", Icon: Linkedin },
+                { href: "https://www.instagram.com/zevyntechnologies_official/", label: "Instagram", Icon: Instagram },
+                { href: "https://github.com/zevyntechnolgies", label: "GitHub", Icon: Github },
               ].map(({ href, label, Icon }) => (
                 <a
                   key={label}
@@ -109,7 +113,7 @@ export function Footer() {
         <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
           <span>© {new Date().getFullYear()} ZEVYN Technologies. All rights reserved.</span>
           <span className="font-semibold uppercase tracking-[0.22em]">
-            Engineered for performance
+            Designed for performance
           </span>
         </div>
       </div>

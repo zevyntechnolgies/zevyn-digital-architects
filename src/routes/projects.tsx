@@ -8,17 +8,17 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Case Studies — Measurable Outcomes | ZEVYN Technologies" },
+      { title: "Our Portfolio — Digital Solutions That Drive Growth | ZEVYN Technologies" },
       {
         name: "description",
         content:
           "Selected ZEVYN case studies across fintech, SaaS, logistics, and revenue ops — with the metrics that matter to leadership.",
       },
-      { property: "og:title", content: "ZEVYN Case Studies" },
+      { property: "og:title", content: "ZEVYN Our Portfolio" },
       { property: "og:description", content: "Selected work and the outcomes it produced." },
-      { property: "og:url", content: "/projects" },
+      { property: "og:url", content: "/our-portfolio" },
     ],
-    links: [{ rel: "canonical", href: "/projects" }],
+    links: [{ rel: "canonical", href: "/our-portfolio" }],
   }),
   component: ProjectsPage,
 });
@@ -33,62 +33,65 @@ type Project = {
   secondary: { value: string; label: string };
 };
 
+
 const allProjects: Project[] = [
   {
     category: "Landing Page",
-    title: "QuantFlow — Acquisition rebuild",
-    problem: "Stalled CAC and a leaky funnel from a generic marketing site.",
-    solution: "Re-architected the funnel, shipped a conversion-engineered hero, and instrumented every interaction.",
-    tech: ["React", "Edge", "PostHog"],
-    metric: { value: "+137%", label: "Leads Generated" },
-    secondary: { value: "4.2s", label: "Avg Load Speed" },
+    title: "SaaS Product Landing Page",
+    problem: "Low visitor engagement and poor lead conversion from an outdated landing page.",
+    solution: "Designed and developed a modern, conversion-focused landing page with optimized user journeys, compelling CTAs, and high-performance architecture.",
+    tech: ["React", "Tailwind CSS", "TypeScript"],
+    metric: { value: "+180%", label: "Lead Conversion" },
+    secondary: { value: "0.8s", label: "Load Time" },
   },
   {
     category: "AI",
-    title: "Northwind — Operations agent network",
-    problem: "Operators spent hours triaging shipment exceptions by hand.",
-    solution: "Built an agent network that classifies, routes, and drafts responses with human approval gates.",
-    tech: ["LangGraph", "Python", "RAG"],
-    metric: { value: "40%", label: "Faster Operations" },
-    secondary: { value: "8h", label: "Saved per Operator/Week" },
+    title: "AI Customer Support Assistant",
+    problem: "Businesses struggled with delayed customer responses and repetitive support requests.",
+    solution: "Developed an AI-powered virtual assistant capable of handling FAQs, lead qualification, and customer support 24/7.",
+    tech: ["OpenAI", "Node.js", "LangChain"],
+    metric: { value: "70%", label: "Support Automated" },
+    secondary: { value: "24/7", label: "Availability" },
   },
   {
     category: "SEO",
-    title: "Lumina — Programmatic search engine",
-    problem: "Strong demand for long-tail queries with no content to capture it.",
-    solution: "Designed a programmatic SEO engine and rebuilt the marketing site around topic clusters.",
-    tech: ["Next.js", "Sanity", "Schema"],
-    metric: { value: "+280%", label: "Organic Traffic" },
-    secondary: { value: "920", label: "Pages Indexed" },
+    title: "Business Website SEO Optimization",
+    problem: "The website had low search visibility and minimal organic traffic.",
+    solution: "Implemented technical SEO, performance improvements, schema markup, and content optimization to improve rankings.",
+    tech: ["Next.js", "Google Analytics", "Schema.org"],
+    metric: { value: "+300%", label: "Organic Traffic" },
+    secondary: { value: "Top 5", label: "Keyword Rankings" },
   },
   {
     category: "CRM",
-    title: "Aether — Revenue ops replatform",
-    problem: "Sales and marketing operated on disconnected data with no attribution.",
-    solution: "Replatformed CRM with custom attribution, automated lifecycle, and exec dashboards.",
-    tech: ["HubSpot", "Snowflake", "dbt"],
-    metric: { value: "3×", label: "Sales Pipeline" },
-    secondary: { value: "12", label: "Markets Live" },
+    title: "Custom CRM Dashboard",
+    problem: "Sales teams relied on spreadsheets, causing inefficient lead tracking and follow-ups.",
+    solution: "Built a centralized CRM platform with lead management, sales automation, customer analytics, and reporting dashboards.",
+    tech: ["React", "Node.js", "MongoDB"],
+    metric: { value: "60%", label: "Productivity Increase" },
+    secondary: { value: "100%", label: "Lead Tracking" },
   },
   {
     category: "Security",
-    title: "Symmetry — SOC 2 readiness",
-    problem: "Enterprise deals blocked by a missing security review.",
-    solution: "Ran an OWASP-aligned audit, hardened infrastructure, and delivered SOC 2 documentation.",
-    tech: ["AWS", "Terraform", "Vanta"],
-    metric: { value: "0", label: "Critical Findings" },
-    secondary: { value: "6 wk", label: "To Audit-Ready" },
+    title: "Enterprise Security Assessment",
+    problem: "The organization required a complete security review before deploying its web platform.",
+    solution: "Performed vulnerability assessments, security testing, and implemented industry best practices to strengthen application security.",
+    tech: ["OWASP", "Burp Suite", "Nmap"],
+    metric: { value: "0", label: "Critical Vulnerabilities" },
+    secondary: { value: "99.9%", label: "System Security" },
   },
   {
-    category: "Landing Page",
-    title: "Vertex — Pricing page experiment system",
-    problem: "Pricing changes shipped without measurement; learnings were lost.",
-    solution: "Built an experiment-first pricing surface with statistical guardrails.",
-    tech: ["React", "Edge", "Statsig"],
-    metric: { value: "+31%", label: "Trial → Paid" },
-    secondary: { value: "9", label: "Experiments / Quarter" },
+    category: "Digital Marketing",
+    title: "Performance Marketing Campaign",
+    problem: "The business struggled to generate consistent online leads through digital channels.",
+    solution: "Executed SEO, Google Ads, Meta Ads, and social media campaigns backed by analytics and conversion tracking.",
+    tech: ["Google Ads", "Meta Ads", "Google Analytics"],
+    metric: { value: "+250%", label: "Qualified Leads" },
+    secondary: { value: "4.8x", label: "ROAS" },
   },
 ];
+
+
 
 const categories = ["All", "Landing Page", "AI", "SEO", "CRM", "Security"] as const;
 
@@ -107,14 +110,13 @@ function ProjectsPage() {
         <section className="mx-auto max-w-7xl px-6">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-              Case Studies
+              Our Portfolio
             </span>
             <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-[1.05] md:text-7xl">
-              Work that ships, measured against the numbers that matter.
+             Building Digital Solutions That Drive Business Growth.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-              A selection of recent engagements across SaaS, fintech, logistics, and B2B —
-              with the outcomes leadership cared about.
+              Explore a selection of our expertise across landing pages, AI integration, digital marketing, CRM solutions, SEO optimization, security, and custom web development—crafted to help businesses grow, scale, and succeed.
             </p>
           </Reveal>
 

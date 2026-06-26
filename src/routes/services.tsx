@@ -26,42 +26,73 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
 });
 
-const services = [
+const services = 
+[
   {
     icon: Zap,
     title: "Landing Page Development",
-    desc: "High-converting, edge-rendered pages designed around a measurable revenue goal.",
-    includes: ["Conversion strategy", "Copy & design", "A/B testing", "Edge deployment"],
+    desc: "Custom landing pages designed to maximize conversions, generate quality leads, and accelerate business growth.",
+    includes: [
+      "Conversion-Focused Design",
+      "Responsive Development",
+      "Performance Optimization",
+      "Lead Generation Strategy",
+    ],
   },
   {
     icon: Bot,
     title: "AI Integration",
-    desc: "Production-grade LLM agents, RAG pipelines, and workflow automation.",
-    includes: ["Use-case discovery", "Pilot in 4–6 weeks", "Eval & observability", "Production hardening"],
+    desc: "Intelligent AI solutions that automate workflows, improve customer engagement, and enhance business productivity.",
+    includes: [
+      "AI Chatbots",
+      "Workflow Automation",
+      "Custom AI Solutions",
+      "Business Process Integration",
+    ],
   },
   {
     icon: Megaphone,
     title: "Digital Marketing",
-    desc: "Paid and organic growth campaigns with full-funnel attribution.",
-    includes: ["Paid social & search", "Creative testing", "Attribution model", "Reporting cadence"],
+    desc: "Data-driven marketing strategies that increase brand visibility, generate leads, and drive measurable business growth.",
+    includes: [
+      "Google & Meta Ads",
+      "Social Media Marketing",
+      "Content Marketing",
+      "Performance Analytics",
+    ],
   },
   {
     icon: Users,
     title: "CRM Solutions",
-    desc: "Custom CRM builds and automations that align sales, marketing, and success.",
-    includes: ["HubSpot · Salesforce", "Lifecycle automation", "Lead routing", "Pipeline reporting"],
+    desc: "Custom CRM platforms that simplify customer management, automate sales processes, and improve team productivity.",
+    includes: [
+      "CRM Development",
+      "Sales Automation",
+      "Lead Management",
+      "Business Analytics",
+    ],
   },
   {
     icon: Search,
     title: "SEO Optimization",
-    desc: "Technical and content SEO that compounds into durable organic traffic.",
-    includes: ["Technical audit", "Topic clusters", "Programmatic SEO", "Authority links"],
+    desc: "Comprehensive SEO strategies that improve search rankings, increase organic traffic, and strengthen your online presence.",
+    includes: [
+      "Technical SEO",
+      "On-Page Optimization",
+      "Keyword Strategy",
+      "Local SEO",
+    ],
   },
   {
     icon: Lock,
     title: "Security Audits",
-    desc: "Enterprise-grade reviews that keep customer data safe and compliance-ready.",
-    includes: ["OWASP review", "Dependency scans", "Pen-test prep", "SOC 2 docs"],
+    desc: "Comprehensive security assessments to identify vulnerabilities and protect your digital infrastructure from evolving threats.",
+    includes: [
+      "Security Assessment",
+      "Vulnerability Testing",
+      "OWASP Best Practices",
+      "Security Recommendations",
+    ],
   },
 ] as const;
 

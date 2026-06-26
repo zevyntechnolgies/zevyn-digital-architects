@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const nav = [
+  { to: "/", label: "Home" },
   { to: "/services", label: "Solutions" },
-  { to: "/projects", label: "Case Studies" },
+  { to: "/projects", label: "Our Portfolio" },
   { to: "/about", label: "Company" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -30,13 +31,12 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2 group">
-          <span
-            aria-hidden
-            className="grid size-8 place-items-center rounded-lg bg-brand-ink text-background transition-transform group-hover:rotate-3"
-          >
-            <span className="size-3 rounded-sm bg-brand-sky" />
-          </span>
-          <span className="font-display text-lg font-bold tracking-tight">ZEVYN</span>
+          <img
+    src="public/company logo.png"
+    alt="ZEVYN Logo"
+    className="h-8 w-8 object-contain transition-transform group-hover:rotate-3"
+  />
+          <span className="font-display text-lg font-bold tracking-tight">Zevyn Technologies</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-9 text-sm font-medium text-muted-foreground">
