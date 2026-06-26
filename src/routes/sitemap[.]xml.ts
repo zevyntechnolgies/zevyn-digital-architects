@@ -1,5 +1,6 @@
-import "@tanstack/start-client-core/dist/esm/serverRoute";
 import { createFileRoute } from "@tanstack/react-router";
+import { createServerFn as _ensureStartTypes } from "@tanstack/react-start";
+void _ensureStartTypes;
 
 const BASE_URL = "";
 
