@@ -1,4 +1,4 @@
-/// <reference types="@tanstack/start-client-core/dist/esm/serverRoute" />
+import "@tanstack/start-client-core/dist/esm/serverRoute";
 import { createFileRoute } from "@tanstack/react-router";
 
 const BASE_URL = "";
