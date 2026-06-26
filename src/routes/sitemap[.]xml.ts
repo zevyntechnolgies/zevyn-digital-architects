@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { createServerFn as _ensureStartTypes } from "@tanstack/react-start";
-void _ensureStartTypes;
+import type { RouteServerOptions } from "@tanstack/react-start";
+type _Ensure = RouteServerOptions<unknown, never, string, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown>;
 
 const BASE_URL = "";
 
