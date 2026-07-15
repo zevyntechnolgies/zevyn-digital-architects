@@ -250,7 +250,7 @@ const faqs = [
 
 
 
-const logos = ["Onyx Technologies", "rotract club of texcity"] as const;
+const logos = ["Onyx Technologies", "Zevyn commerce"] as const;
 
 /* ----------------------------- Page ----------------------------- */
 

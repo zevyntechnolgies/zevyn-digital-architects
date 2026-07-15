@@ -28,45 +28,45 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  
-const [loading, setLoading] = useState(false);
-const [error, setError] = useState("");
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [sent, setSent] = useState(false);
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault();
+    e.preventDefault();
 
-  setLoading(true);
-  setError("");
+    setLoading(true);
+    setError("");
 
-  const form = e.currentTarget;
-  const formData = new FormData(form);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-  try {
-    await submitContact({
-      data: {
-        name: formData.get("name") as string,
-        email: formData.get("email") as string,
-        company: formData.get("company") as string,
-        website: formData.get("website") as string,
-        projectType: formData.get("projectType") as string,
-        message: formData.get("message") as string,
-      },
-    });
+    try {
+      await submitContact({
+        data: {
+          name: formData.get("name") as string,
+          email: formData.get("email") as string,
+          company: formData.get("company") as string,
+          // website: formData.get("website") as string,
+          projectType: formData.get("projectType") as string,
+          message: formData.get("message") as string,
+        },
+      });
 
-    form.reset();
-    setSent(true);
-    
-  } catch (err) {
-    setError(
-      err instanceof Error
-        ? err.message
-        : "Something went wrong."
-    );
-  } finally {
-    setLoading(false);
-    
+      form.reset();
+      setSent(true);
+
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong."
+      );
+    } finally {
+      setLoading(false);
+
+    }
   }
-}
   return (
     <div className="min-h-dvh bg-background">
       <Navbar />
@@ -128,8 +128,10 @@ const [error, setError] = useState("");
                   <div className="grid gap-5 md:grid-cols-2">
                     <Field label="Full name" name="name" required />
                     <Field label="Work email" name="email" type="email" required />
-                    <Field label="Company" name="company" />
-                    <Field label="Website" name="website" />
+                    <div className="md:col-span-2">
+                      <Field label="Company" name="company" />
+                    </div>
+                    {/* <Field label="Website" name="website" /> */}
                     <div className="md:col-span-2">
                       <label className="block">
                         <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
@@ -176,14 +178,14 @@ const [error, setError] = useState("");
                         By submitting, you agree to be contacted about your project.
                       </p>
                       {error && (
-  <div className="md:col-span-2 rounded-xl border border-red-300 bg-red-50 p-3 text-sm text-red-600">
-    {error}
-  </div>
-)}
+                        <div className="md:col-span-2 rounded-xl border border-red-300 bg-red-50 p-3 text-sm text-red-600">
+                          {error}
+                        </div>
+                      )}
                       <button
                         type="submit"
                         disabled={loading}
-                        
+
                         className="inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-elegant transition-transform hover:-translate-y-px disabled:cursor-not-allowed"
                       >
                         {loading ? "Sending..." : "Send Message"}
