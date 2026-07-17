@@ -68,7 +68,7 @@ const [error, setError] = useState("");
   }
 }
   return (
-    <div className="min-h-dvh bg-background">
+    <div className="min-h-dvh">
       <Navbar />
       <main className="pt-32 pb-24">
         <section className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12">

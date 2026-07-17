@@ -98,7 +98,7 @@ const services =
 
 function ServicesPage() {
   return (
-    <div className="min-h-dvh bg-background">
+    <div className="min-h-dvh">
       <Navbar />
       <main className="pt-32 pb-24">
         <section className="mx-auto max-w-7xl px-6">
