@@ -49,7 +49,7 @@ const values = [
 
 function AboutPage() {
   return (
-    <div className="min-h-dvh bg-background">
+    <div className="min-h-dvh">
       <Navbar />
       <main className="pt-32 pb-24">
         <section className="mx-auto max-w-5xl px-6 text-center">

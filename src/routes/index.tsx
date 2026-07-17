@@ -256,7 +256,7 @@ const logos = ["Onyx Technologies", "Zevyn commerce"] as const;
 
 function HomePage() {
   return (
-    <div className="min-h-dvh bg-background text-foreground">
+    <div className="min-h-dvh text-foreground">
       <Navbar />
       <main>
         <Hero />
@@ -281,7 +281,6 @@ function Hero() {
   return (
     <section className="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-28">
       <div className="absolute inset-0 -z-10 bg-grid bg-grid-fade" aria-hidden />
-      <div className="absolute inset-x-0 top-0 -z-10 h-[640px] bg-mesh animate-mesh opacity-70" aria-hidden />
 
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex flex-col items-center text-center">

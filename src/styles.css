@@ -174,9 +174,10 @@
 /* Utility: gradient mesh background */
 @utility bg-mesh {
   background-image:
-    radial-gradient(at 12% 8%, oklch(0.91 0.045 235 / 0.55) 0px, transparent 55%),
-    radial-gradient(at 88% 18%, oklch(0.91 0.06 75 / 0.45) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, oklch(0.96 0.028 215 / 0.6) 0px, transparent 60%);
+    radial-gradient(at 0% 0%, oklch(0.91 0.045 235 / 1) 0px, transparent 75%),
+    radial-gradient(at 100% 0%, oklch(0.91 0.06 75 / 0.9) 0px, transparent 75%),
+    radial-gradient(at 100% 100%, oklch(0.96 0.028 215 / 1) 0px, transparent 75%),
+    radial-gradient(at 0% 100%, oklch(0.91 0.045 235 / 0.8) 0px, transparent 75%);
 }
 
 @utility bg-grid {
@@ -208,12 +209,14 @@
 }
 
 @keyframes mesh-drift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0% { background-position: 0% 0%; }
+  33% { background-position: 100% 50%; }
+  66% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
 }
 @utility animate-mesh {
-  background-size: 200% 200%;
-  animation: mesh-drift 18s ease-in-out infinite;
+  background-size: 150% 150%;
+  animation: mesh-drift 30s ease-in-out infinite;
 }
 
 /* Reveal on scroll baseline */
