@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const BASE_URL = "https://zevyn.tech";
+const BASE_URL = "https://www.zevyn.tech";
 const today = new Date().toISOString().split("T")[0];
 
 interface SitemapEntry {
