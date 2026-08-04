@@ -6,21 +6,21 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Building Digital Solutions That Create Real Business Impact | ZEVYN" },
+      { title: "Building Digital Solutions That Create Real Business Impact | Zevyn" },
       {
         name: "description",
         content:
-          "ZEVYN is a distributed team of senior designers, engineers, and growth operators building digital systems that create measurable business outcomes.",
+          "Zevyn is a distributed team of senior designers, engineers, and growth operators building digital systems that create measurable business outcomes.",
       },
-      { property: "og:title", content: "About ZEVYN Technologies" },
+      { property: "og:title", content: "About Zevyn Technologies" },
       {
         property: "og:description",
         content:
           "A senior, distributed team of designers, engineers, and growth operators.",
       },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://zevyn.tech/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://zevyn.tech/about" }],
   }),
   component: AboutPage,
 });

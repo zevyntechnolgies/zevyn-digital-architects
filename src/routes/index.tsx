@@ -23,28 +23,28 @@ import { AnimatedNumber } from "../components/site/AnimatedNumber";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ZEVYN Tech — Website Development & High-Converting Landing Pages" },
+      { title: "Zevyn Tech — Website Development & High-Converting Landing Pages" },
       {
         name: "description",
         content:
-          "ZEVYN Tech specializes in website development, high-converting landing pages, AI automation, CRM systems, and SEO for ambitious companies worldwide.",
+          "Zevyn Tech specializes in website development, high-converting landing pages, AI automation, CRM systems, and SEO for ambitious companies worldwide.",
       },
-      { property: "og:title", content: "ZEVYN Tech — Website Development & Landing Pages" },
+      { property: "og:title", content: "Zevyn Tech — Website Development & Landing Pages" },
       {
         property: "og:description",
         content:
-          "ZEVYN Tech builds high-converting landing pages, website development, AI automation, and secure web platforms for ambitious companies worldwide.",
+          "Zevyn Tech builds high-converting landing pages, website development, AI automation, and secure web platforms for ambitious companies worldwide.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://zevyn.tech" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://zevyn.tech" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "ZEVYN Tech",
+          name: "Zevyn Tech",
           url: "https://zevyn.tech",
           logo: "https://zevyn.tech/logo.png",
           description: "Website development and landing pages built for growth.",
@@ -55,8 +55,8 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "ZEVYN Technologies",
-          url: "/",
+          name: "Zevyn Technologies",
+          url: "https://zevyn.tech",
         }),
       },
       {

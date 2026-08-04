@@ -8,17 +8,17 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Our Portfolio — Digital Solutions That Drive Growth | ZEVYN Technologies" },
+      { title: "Our Portfolio — Digital Solutions That Drive Growth | Zevyn Technologies" },
       {
         name: "description",
         content:
-          "Selected ZEVYN case studies across fintech, SaaS, logistics, and revenue ops — with the metrics that matter to leadership.",
+          "Selected Zevyn case studies across fintech, SaaS, logistics, and revenue ops — with the metrics that matter to leadership.",
       },
-      { property: "og:title", content: "ZEVYN Our Portfolio" },
+      { property: "og:title", content: "Zevyn Our Portfolio" },
       { property: "og:description", content: "Selected work and the outcomes it produced." },
-      { property: "og:url", content: "/our-portfolio" },
+      { property: "og:url", content: "https://zevyn.tech/our-portfolio" },
     ],
-    links: [{ rel: "canonical", href: "/our-portfolio" }],
+    links: [{ rel: "canonical", href: "https://zevyn.tech/our-portfolio" }],
   }),
   component: ProjectsPage,
 });

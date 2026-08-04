@@ -78,24 +78,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ZEVYN Technologies — Engineering Intelligent Digital Experiences" },
+      { title: "Zevyn Technologies — Engineering Intelligent Digital Experiences" },
       {
         name: "description",
         content:
-          "ZEVYN builds high-converting landing pages, AI automation, CRM systems, SEO, and secure web platforms for ambitious companies worldwide.",
+          "Zevyn builds high-converting landing pages, AI automation, CRM systems, SEO, and secure web platforms for ambitious companies worldwide.",
       },
-      { name: "author", content: "ZEVYN Technologies" },
+      { name: "author", content: "Zevyn Technologies" },
       { name: "theme-color", content: "#FBFBFB" },
-      { property: "og:site_name", content: "ZEVYN Technologies" },
+      { property: "og:site_name", content: "Zevyn Technologies" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "ZEVYN Technologies" },
+      { property: "og:title", content: "Zevyn Technologies" },
       {
         property: "og:description",
         content:
           "Engineering intelligent digital experiences — landing pages, AI integration, SEO, CRM, and security.",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ZEVYN Technologies" },
+      { name: "twitter:title", content: "Zevyn Technologies" },
       {
         name: "twitter:description",
         content:
@@ -127,10 +127,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "ZEVYN Technologies",
+          name: "Zevyn Technologies",
           url: "https://zevyn.tech",
           description:
-            "ZEVYN Technologies engineers high-converting landing pages, AI automation, CRM, SEO, and security solutions.",
+            "Zevyn Technologies engineers high-converting landing pages, AI automation, CRM, SEO, and security solutions.",
           sameAs: [],
         }),
       },

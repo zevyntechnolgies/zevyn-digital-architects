@@ -7,21 +7,21 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Landing Pages, AI, SEO, CRM & Security | ZEVYN" },
+      { title: "Services — Landing Pages, AI, SEO, CRM & Security | Zevyn" },
       {
         name: "description",
         content:
-          "End-to-end digital services from ZEVYN — landing page development, AI integration, digital marketing, CRM, SEO, and security audits.",
+          "End-to-end digital services from Zevyn — landing page development, AI integration, digital marketing, CRM, SEO, and security audits.",
       },
-      { property: "og:title", content: "ZEVYN Services" },
+      { property: "og:title", content: "Zevyn Services" },
       {
         property: "og:description",
         content:
           "Landing pages, AI integration, SEO, CRM, digital marketing, and security — engineered as one system.",
       },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "https://zevyn.tech/services" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://zevyn.tech/services" }],
   }),
   component: ServicesPage,
 });

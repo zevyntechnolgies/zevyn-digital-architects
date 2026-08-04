@@ -9,20 +9,20 @@ import { submitContact } from "@/lib/contact.functions";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Book a Strategy Call | ZEVYN Technologies" },
+      { title: "Contact — Book a Strategy Call | Zevyn Technologies" },
       {
         name: "description",
         content:
-          "Tell ZEVYN about your project. We respond within one business day and scope a fixed-price engagement.",
+          "Tell Zevyn about your project. We respond within one business day and scope a fixed-price engagement.",
       },
-      { property: "og:title", content: "Contact ZEVYN" },
+      { property: "og:title", content: "Contact Zevyn" },
       {
         property: "og:description",
         content: "Book a strategy call. Fixed-scope engagements. One-business-day replies.",
       },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://zevyn.tech/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://zevyn.tech/contact" }],
   }),
   component: ContactPage,
 });
