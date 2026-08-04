@@ -23,22 +23,33 @@ import { AnimatedNumber } from "../components/site/AnimatedNumber";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ZEVYN Technologies — Landing Pages That Convert. Built for Growth." },
+      { title: "ZEVYN Tech — Website Development & High-Converting Landing Pages" },
       {
         name: "description",
         content:
-          "ZEVYN helps businesses grow with conversion-focused landing pages, AI automation, SEO, CRM integrations, and enterprise-grade security.",
+          "ZEVYN Tech specializes in website development, high-converting landing pages, AI automation, CRM systems, and SEO for ambitious companies worldwide.",
       },
-      { property: "og:title", content: "ZEVYN Technologies" },
+      { property: "og:title", content: "ZEVYN Tech — Website Development & Landing Pages" },
       {
         property: "og:description",
         content:
-          "Landing pages that turn visitors into customers — engineered with conversion, AI, and SEO at the core.",
+          "ZEVYN Tech builds high-converting landing pages, website development, AI automation, and secure web platforms for ambitious companies worldwide.",
       },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "ZEVYN Tech",
+          url: "https://zevyn.tech",
+          logo: "https://zevyn.tech/logo.png",
+          description: "Website development and landing pages built for growth.",
+        }),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -177,32 +188,32 @@ const stats = [
   { value: 98, suffix: "%", label: "Performance score" },
 ] as const;
 
-// const testimonials = [
-//   {
-//     quote:
-//       "ZEVYN rebuilt our acquisition system end to end. We shipped in six weeks and saw a 137% jump in qualified leads.",
-//     name: "Priya Nair",
-//     role: "VP Growth, QuantFlow",
-//   },
-//   {
-//     quote:
-//       "The AI workflow they integrated paid for itself in the first month. Operations are genuinely faster and calmer.",
-//     name: "Marcus Lin",
-//     role: "COO, Northwind Logistics",
-//   },
-//   {
-//     quote:
-//       "Easily the most rigorous engineering team we've partnered with. The work feels like it came from a product company.",
-//     name: "Sara Reyes",
-//     role: "Head of Brand, Lumina",
-//   },
-//   {
-//     quote:
-//       "Conversion-focused thinking on every screen. Our trial-to-paid lifted 31% without changing the offer.",
-//     name: "Daniel Okafor",
-//     role: "Founder, Aether",
-//   },
-// ] as const;
+const testimonials = [
+  {
+    quote:
+      "ZEVYN rebuilt our acquisition system end to end. We shipped in six weeks and saw a 137% jump in qualified leads.",
+    name: "Priya Nair",
+    role: "VP Growth, QuantFlow",
+  },
+  {
+    quote:
+      "The AI workflow they integrated paid for itself in the first month. Operations are genuinely faster and calmer.",
+    name: "Marcus Lin",
+    role: "COO, Northwind Logistics",
+  },
+  {
+    quote:
+      "Easily the most rigorous engineering team we've partnered with. The work feels like it came from a product company.",
+    name: "Sara Reyes",
+    role: "Head of Brand, Lumina",
+  },
+  {
+    quote:
+      "Conversion-focused thinking on every screen. Our trial-to-paid lifted 31% without changing the offer.",
+    name: "Daniel Okafor",
+    role: "Founder, Aether",
+  },
+] as const;
 
 const why = [
   { icon: Zap, title: "Innovation-Driven Solutions", desc: "We combine creativity, strategy, and cutting-edge technology to deliver digital solutions that help businesses stay ahead of the competition." },
@@ -265,7 +276,7 @@ function HomePage() {
         <Process />
         <FeaturedProjects />
         <Stats />
-        {/* <Testimonials /> */}
+        <Testimonials />
         <WhyZevyn />
         <FAQ />
         <FinalCTA />
@@ -296,23 +307,22 @@ function Hero() {
 
           <Reveal delay={80}>
             <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-center md:text-7xl">
-              Accelerate Your Business With {" "}
+              Accelerate Growth With Expert {" "}
               <span className="relative inline-block">
-                Intelligent
+                Website Development
                 <span
                   aria-hidden
                   className="absolute inset-x-0 bottom-1 -z-10 h-3 rounded-sm bg-brand-sky"
                 />
               </span>{" "}
-              Solutions
+              & Landing Pages
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              ZEVYN helps businesses grow with conversion-focused landing pages,
-              AI-powered automation, SEO optimization, digital marketing, and
-              scalable web solutions.
+              ZEVYN Tech helps businesses scale with custom website builders, conversion-focused landing pages,
+              AI-powered automation, SEO optimization, and enterprise-grade web development.
             </p>
           </Reveal>
 
@@ -679,60 +689,59 @@ function Stats() {
     </section>
   );
 }
-// testimonials are currently commented out, but you can uncomment the following code to display them when needed.
-// function Testimonials() {
-//   return (
-//     <section className="py-24 md:py-32">
-//       <div className="mx-auto max-w-7xl px-6">
-//         <div className="max-w-2xl">
-//           <Reveal>
-//             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-//               Testimonials
-//             </span>
-//             <h2 className="mt-3 font-display text-4xl font-bold leading-tight md:text-5xl">
-//               Leaders trust ZEVYN with their growth.
-//             </h2>
-//           </Reveal>
-//         </div>
+function Testimonials() {
+  return (
+    <section className="py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="max-w-2xl">
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              Testimonials
+            </span>
+            <h2 className="mt-3 font-display text-4xl font-bold leading-tight md:text-5xl">
+              Leaders trust ZEVYN Tech with their growth.
+            </h2>
+          </Reveal>
+        </div>
 
-//         <div className="mt-14 grid gap-5 md:grid-cols-2">
-//           {testimonials.map((t, i) => (
-//             <Reveal key={t.name} delay={i * 60}>
-//               <figure className="flex h-full flex-col rounded-3xl border border-border bg-card p-8">
-//                 <div className="flex items-center gap-1 text-foreground" aria-label="Five stars">
-//                   {Array.from({ length: 5 }).map((_, j) => (
-//                     <svg key={j} viewBox="0 0 20 20" className="size-4 fill-current" aria-hidden>
-//                       <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" />
-//                     </svg>
-//                   ))}
-//                 </div>
-//                 <blockquote className="mt-5 flex-1 font-display text-lg leading-snug text-foreground">
-//                   “{t.quote}”
-//                 </blockquote>
-//                 <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-//                   <span
-//                     aria-hidden
-//                     className="grid size-10 place-items-center rounded-full bg-brand-sky font-display text-sm font-bold text-foreground"
-//                   >
-//                     {t.name
-//                       .split(" ")
-//                       .map((n) => n[0])
-//                       .slice(0, 2)
-//                       .join("")}
-//                   </span>
-//                   <div>
-//                     <div className="text-sm font-semibold">{t.name}</div>
-//                     <div className="text-xs text-muted-foreground">{t.role}</div>
-//                   </div>
-//                 </figcaption>
-//               </figure>
-//             </Reveal>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
+        <div className="mt-14 grid gap-5 md:grid-cols-2">
+          {testimonials.map((t, i) => (
+            <Reveal key={t.name} delay={i * 60}>
+              <figure className="flex h-full flex-col rounded-3xl border border-border bg-card p-8">
+                <div className="flex items-center gap-1 text-foreground" aria-label="Five stars">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <svg key={j} viewBox="0 0 20 20" className="size-4 fill-current" aria-hidden>
+                      <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" />
+                    </svg>
+                  ))}
+                </div>
+                <blockquote className="mt-5 flex-1 font-display text-lg leading-snug text-foreground">
+                  “{t.quote}”
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
+                  <span
+                    aria-hidden
+                    className="grid size-10 place-items-center rounded-full bg-brand-sky font-display text-sm font-bold text-foreground"
+                  >
+                    {t.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .slice(0, 2)
+                      .join("")}
+                  </span>
+                  <div>
+                    <div className="text-sm font-semibold">{t.name}</div>
+                    <div className="text-xs text-muted-foreground">{t.role}</div>
+                  </div>
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function WhyZevyn() {
   return (
