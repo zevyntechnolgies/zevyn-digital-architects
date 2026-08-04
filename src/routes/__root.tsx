@@ -128,7 +128,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "ZEVYN Technologies",
-          url: "/",
+          url: "https://zevyn.tech",
           description:
             "ZEVYN Technologies engineers high-converting landing pages, AI automation, CRM, SEO, and security solutions.",
           sameAs: [],
