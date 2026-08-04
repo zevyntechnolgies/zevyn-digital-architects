@@ -101,7 +101,7 @@ function ContactPage() {
                   </span>
                   <div>
                     <div className="font-semibold">Location</div>
-                    <div className="text-muted-foreground">We operate in Coimbatore</div>
+                    <div className="text-muted-foreground">65-75 , Kamarajar Nagar , Ondipudhur , Coimbatore-641016</div>
                   </div>
                 </li>
               </ul>
