@@ -34,6 +34,8 @@ export function Navbar() {
           <img
     src="/company logo.png"
     alt="ZEVYN Logo"
+    width={32}
+    height={32}
     className="h-8 w-8 object-contain transition-transform group-hover:rotate-3"
   />
           <span className="font-display text-lg font-bold tracking-tight">Zevyn Technologies</span>
