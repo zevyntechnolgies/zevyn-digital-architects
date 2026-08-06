@@ -26,8 +26,7 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
 });
 
-const services = 
-[
+const services = [
   {
     icon: Zap,
     title: "Landing Page Development",
@@ -65,23 +64,13 @@ const services =
     icon: Users,
     title: "CRM Solutions",
     desc: "Custom CRM platforms that simplify customer management, automate sales processes, and improve team productivity.",
-    includes: [
-      "CRM Development",
-      "Sales Automation",
-      "Lead Management",
-      "Business Analytics",
-    ],
+    includes: ["CRM Development", "Sales Automation", "Lead Management", "Business Analytics"],
   },
   {
     icon: Search,
     title: "SEO Optimization",
     desc: "Comprehensive SEO strategies that improve search rankings, increase organic traffic, and strengthen your online presence.",
-    includes: [
-      "Technical SEO",
-      "On-Page Optimization",
-      "Keyword Strategy",
-      "Local SEO",
-    ],
+    includes: ["Technical SEO", "On-Page Optimization", "Keyword Strategy", "Local SEO"],
   },
   {
     icon: Lock,
@@ -110,8 +99,8 @@ function ServicesPage() {
               A complete digital system, engineered by one team.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-              ZEVYN brings the disciplines that move revenue — design, engineering, AI,
-              marketing, and security — under a single delivery model.
+              ZEVYN brings the disciplines that move revenue — design, engineering, AI, marketing,
+              and security — under a single delivery model.
             </p>
           </Reveal>
         </section>

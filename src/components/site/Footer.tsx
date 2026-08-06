@@ -38,19 +38,20 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <Link to="/" className="flex items-center gap-2 group">
-          <img
-    src="/company logo.png"
-    alt="ZEVYN Logo"
-    width={32}
-    height={32}
-    className="h-8 w-8 object-contain transition-transform group-hover:rotate-3"
-  />
-          <span className="font-display text-lg font-bold tracking-tight">Zevyn Technologies</span>
-        </Link>
+              <img
+                src="/company logo.png"
+                alt="ZEVYN Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8 object-contain transition-transform group-hover:rotate-3"
+              />
+              <span className="font-display text-lg font-bold tracking-tight">
+                Zevyn Technologies
+              </span>
+            </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              ZEVYN helps businesses grow with conversion-focused landing pages,
-              AI-powered automation, SEO optimization, digital marketing, and
-              scalable web solutions.
+              ZEVYN helps businesses grow with conversion-focused landing pages, AI-powered
+              automation, SEO optimization, digital marketing, and scalable web solutions.
             </p>
             {/* <form
               onSubmit={(e) => e.preventDefault()}
@@ -95,8 +96,16 @@ export function Footer() {
             </h4>
             <div className="mt-5 flex gap-2">
               {[
-                { href: "https://www.linkedin.com/in/zevyn-technolgies-b2a029417/", label: "LinkedIn", Icon: Linkedin },
-                { href: "https://www.instagram.com/zevyntechnologies_official/", label: "Instagram", Icon: Instagram },
+                {
+                  href: "https://www.linkedin.com/in/zevyn-technolgies-b2a029417/",
+                  label: "LinkedIn",
+                  Icon: Linkedin,
+                },
+                {
+                  href: "https://www.instagram.com/zevyntechnologies_official/",
+                  label: "Instagram",
+                  Icon: Instagram,
+                },
                 { href: "https://github.com/zevyntechnolgies", label: "GitHub", Icon: Github },
               ].map(({ href, label, Icon }) => (
                 <a

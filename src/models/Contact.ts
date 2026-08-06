@@ -41,20 +41,13 @@ const ContactSchema = new Schema(
 
     status: {
       type: String,
-      enum: [
-        "New",
-        "Contacted",
-        "Proposal Sent",
-        "In Progress",
-        "Completed",
-        "Closed",
-      ],
+      enum: ["New", "Contacted", "Proposal Sent", "In Progress", "Completed", "Closed"],
       default: "New",
     },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const Contact = models.Contact || model("Contact", ContactSchema);

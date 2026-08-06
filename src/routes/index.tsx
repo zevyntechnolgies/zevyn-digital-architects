@@ -83,7 +83,11 @@ const services = [
     icon: Zap,
     title: "Landing Page Development",
     desc: "We design and develop high-performance landing pages that transform visitors into qualified leads and paying customers through strategic design, persuasive content, and lightning-fast performance.",
-    bullets: ["Conversion-focused UI/UX", "Mobile-first responsive design", "Lightning-fast loading speed"],
+    bullets: [
+      "Conversion-focused UI/UX",
+      "Mobile-first responsive design",
+      "Lightning-fast loading speed",
+    ],
     tag: "Most popular",
   },
   {
@@ -180,7 +184,6 @@ const projects = [
   },
 ] as const;
 
-
 const stats = [
   { value: 25, suffix: "+", label: "Projects shipped" },
   { value: 95, suffix: "%", label: "Client satisfaction" },
@@ -216,12 +219,36 @@ const testimonials = [
 ] as const;
 
 const why = [
-  { icon: Zap, title: "Innovation-Driven Solutions", desc: "We combine creativity, strategy, and cutting-edge technology to deliver digital solutions that help businesses stay ahead of the competition." },
-  { icon: Gauge, title: "Performance optimized", desc: "Every website and application is optimized for speed, responsiveness, and exceptional user experience to maximize business results." },
-  { icon: Bot, title: "AI-ready architecture", desc: "From intelligent automation to AI integrations, we build future-ready solutions that improve productivity and customer engagement." },
-  { icon: Search, title: "SEO from day one", desc: "Every project is developed with technical SEO, performance optimization, and search visibility in mind to ensure sustainable online growth." },
-  { icon: Lock, title: "Security & Reliability", desc: "OWASP-aligned reviews and We follow modern security best practices, secure coding standards, and regular security assessments to protect your digital assets." },
-  { icon: LineChart, title: "Long-Term Partnership", desc: "Our relationship doesn't end after launch. We provide continuous support, optimization, maintenance, and strategic improvements to help your business grow." },
+  {
+    icon: Zap,
+    title: "Innovation-Driven Solutions",
+    desc: "We combine creativity, strategy, and cutting-edge technology to deliver digital solutions that help businesses stay ahead of the competition.",
+  },
+  {
+    icon: Gauge,
+    title: "Performance optimized",
+    desc: "Every website and application is optimized for speed, responsiveness, and exceptional user experience to maximize business results.",
+  },
+  {
+    icon: Bot,
+    title: "AI-ready architecture",
+    desc: "From intelligent automation to AI integrations, we build future-ready solutions that improve productivity and customer engagement.",
+  },
+  {
+    icon: Search,
+    title: "SEO from day one",
+    desc: "Every project is developed with technical SEO, performance optimization, and search visibility in mind to ensure sustainable online growth.",
+  },
+  {
+    icon: Lock,
+    title: "Security & Reliability",
+    desc: "OWASP-aligned reviews and We follow modern security best practices, secure coding standards, and regular security assessments to protect your digital assets.",
+  },
+  {
+    icon: LineChart,
+    title: "Long-Term Partnership",
+    desc: "Our relationship doesn't end after launch. We provide continuous support, optimization, maintenance, and strategic improvements to help your business grow.",
+  },
 ] as const;
 
 const faqs = [
@@ -258,8 +285,6 @@ const faqs = [
     a: "Simply contact us through our website or book a free consultation. We'll discuss your requirements, understand your goals, and provide a customized proposal tailored to your business.",
   },
 ] as const;
-
-
 
 const logos = ["Onyx Technologies", "Zevyn commerce"] as const;
 
@@ -307,7 +332,7 @@ function Hero() {
 
           <Reveal delay={80}>
             <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-center md:text-7xl">
-              Accelerate Growth With Expert {" "}
+              Accelerate Growth With Expert{" "}
               <span className="relative inline-block">
                 Website Development
                 <span
@@ -321,8 +346,9 @@ function Hero() {
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              ZEVYN Tech helps businesses scale with custom website builders, conversion-focused landing pages,
-              AI-powered automation, SEO optimization, and enterprise-grade web development.
+              ZEVYN Tech helps businesses scale with custom website builders, conversion-focused
+              landing pages, AI-powered automation, SEO optimization, and enterprise-grade web
+              development.
             </p>
           </Reveal>
 
@@ -500,8 +526,8 @@ function Services() {
           </Reveal>
           <Reveal delay={80}>
             <p className="max-w-md text-muted-foreground">
-              A complete digital surface area — from the first click to the
-              long-tail revenue loop — engineered as one system.
+              A complete digital surface area — from the first click to the long-tail revenue loop —
+              engineered as one system.
             </p>
           </Reveal>
         </div>
@@ -624,7 +650,9 @@ function FeaturedProjects() {
                   </span>
                 </div>
                 <h3 className="mt-6 font-display text-2xl font-bold leading-snug">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {p.description}
+                </p>
 
                 <div className="mt-8 grid grid-cols-2 gap-4 border-t border-border pt-6">
                   <div>
@@ -833,7 +861,9 @@ function FAQ() {
                     }`}
                   >
                     <div className="min-h-0">
-                      <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+                      <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                        {f.a}
+                      </p>
                     </div>
                   </div>
                 </li>
@@ -850,10 +880,7 @@ function FinalCTA() {
   return (
     <section className="px-6 py-24 md:py-32">
       <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[36px] border border-border bg-foreground p-12 text-background md:p-20">
-        <div
-          aria-hidden
-          className="absolute inset-0 -z-0 bg-mesh animate-mesh opacity-25"
-        />
+        <div aria-hidden className="absolute inset-0 -z-0 bg-mesh animate-mesh opacity-25" />
         <div className="relative z-10 grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-8">
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-background/70">
@@ -863,8 +890,8 @@ function FinalCTA() {
               Ready to grow faster?
             </h2>
             <p className="mt-5 max-w-xl text-background/70">
-              Tell us where you want to be in 12 months. We'll show you how to get there — and
-              ship the system that takes you.
+              Tell us where you want to be in 12 months. We'll show you how to get there — and ship
+              the system that takes you.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 md:col-span-4 md:justify-end">

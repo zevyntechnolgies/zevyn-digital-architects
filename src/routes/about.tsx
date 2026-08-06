@@ -15,8 +15,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Zevyn Technologies" },
       {
         property: "og:description",
-        content:
-          "A senior, distributed team of designers, engineers, and growth operators.",
+        content: "A senior, distributed team of designers, engineers, and growth operators.",
       },
       { property: "og:url", content: "https://zevyn.tech/about" },
     ],
@@ -24,7 +23,6 @@ export const Route = createFileRoute("/about")({
   }),
   component: AboutPage,
 });
-
 
 const values = [
   {
@@ -45,8 +43,6 @@ const values = [
   },
 ];
 
-
-
 function AboutPage() {
   return (
     <div className="min-h-dvh">
@@ -61,7 +57,10 @@ function AboutPage() {
               Building Digital Solutions That Create Real Business Impact
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              ZEVYN Technologies is a modern digital solutions agency dedicated to helping businesses grow through innovative technology, intelligent automation, and exceptional digital experiences. We combine creativity, strategy, and engineering to build products that deliver measurable results.
+              ZEVYN Technologies is a modern digital solutions agency dedicated to helping
+              businesses grow through innovative technology, intelligent automation, and exceptional
+              digital experiences. We combine creativity, strategy, and engineering to build
+              products that deliver measurable results.
             </p>
           </Reveal>
         </section>
@@ -82,9 +81,9 @@ function AboutPage() {
         <section className="mx-auto mt-24 max-w-7xl px-6">
           <div className="grid gap-12 rounded-[36px] border border-border bg-brand-subtle p-10 md:grid-cols-3 md:p-16">
             {[
-             { v: "100%", l: "Custom Solutions" },
-{ v: "24/7", l: "Technical Support" },
-{ v: "AI", l: "Powered Solutions" },
+              { v: "100%", l: "Custom Solutions" },
+              { v: "24/7", l: "Technical Support" },
+              { v: "AI", l: "Powered Solutions" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display text-5xl font-bold">{s.v}</div>

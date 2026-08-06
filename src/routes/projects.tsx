@@ -33,13 +33,13 @@ type Project = {
   secondary: { value: string; label: string };
 };
 
-
 const allProjects: Project[] = [
   {
     category: "Landing Page",
     title: "SaaS Product Landing Page",
     problem: "Low visitor engagement and poor lead conversion from an outdated landing page.",
-    solution: "Designed and developed a modern, conversion-focused landing page with optimized user journeys, compelling CTAs, and high-performance architecture.",
+    solution:
+      "Designed and developed a modern, conversion-focused landing page with optimized user journeys, compelling CTAs, and high-performance architecture.",
     tech: ["React", "Tailwind CSS", "TypeScript"],
     metric: { value: "+180%", label: "Lead Conversion" },
     secondary: { value: "0.8s", label: "Load Time" },
@@ -47,8 +47,10 @@ const allProjects: Project[] = [
   {
     category: "AI",
     title: "AI Customer Support Assistant",
-    problem: "Businesses struggled with delayed customer responses and repetitive support requests.",
-    solution: "Developed an AI-powered virtual assistant capable of handling FAQs, lead qualification, and customer support 24/7.",
+    problem:
+      "Businesses struggled with delayed customer responses and repetitive support requests.",
+    solution:
+      "Developed an AI-powered virtual assistant capable of handling FAQs, lead qualification, and customer support 24/7.",
     tech: ["OpenAI", "Node.js", "LangChain"],
     metric: { value: "70%", label: "Support Automated" },
     secondary: { value: "24/7", label: "Availability" },
@@ -57,7 +59,8 @@ const allProjects: Project[] = [
     category: "SEO",
     title: "Business Website SEO Optimization",
     problem: "The website had low search visibility and minimal organic traffic.",
-    solution: "Implemented technical SEO, performance improvements, schema markup, and content optimization to improve rankings.",
+    solution:
+      "Implemented technical SEO, performance improvements, schema markup, and content optimization to improve rankings.",
     tech: ["Next.js", "Google Analytics", "Schema.org"],
     metric: { value: "+300%", label: "Organic Traffic" },
     secondary: { value: "Top 5", label: "Keyword Rankings" },
@@ -65,8 +68,10 @@ const allProjects: Project[] = [
   {
     category: "CRM",
     title: "Custom CRM Dashboard",
-    problem: "Sales teams relied on spreadsheets, causing inefficient lead tracking and follow-ups.",
-    solution: "Built a centralized CRM platform with lead management, sales automation, customer analytics, and reporting dashboards.",
+    problem:
+      "Sales teams relied on spreadsheets, causing inefficient lead tracking and follow-ups.",
+    solution:
+      "Built a centralized CRM platform with lead management, sales automation, customer analytics, and reporting dashboards.",
     tech: ["React", "Node.js", "MongoDB"],
     metric: { value: "60%", label: "Productivity Increase" },
     secondary: { value: "100%", label: "Lead Tracking" },
@@ -74,8 +79,10 @@ const allProjects: Project[] = [
   {
     category: "Security",
     title: "Enterprise Security Assessment",
-    problem: "The organization required a complete security review before deploying its web platform.",
-    solution: "Performed vulnerability assessments, security testing, and implemented industry best practices to strengthen application security.",
+    problem:
+      "The organization required a complete security review before deploying its web platform.",
+    solution:
+      "Performed vulnerability assessments, security testing, and implemented industry best practices to strengthen application security.",
     tech: ["OWASP", "Burp Suite", "Nmap"],
     metric: { value: "0", label: "Critical Vulnerabilities" },
     secondary: { value: "99.9%", label: "System Security" },
@@ -84,14 +91,13 @@ const allProjects: Project[] = [
     category: "Digital Marketing",
     title: "Performance Marketing Campaign",
     problem: "The business struggled to generate consistent online leads through digital channels.",
-    solution: "Executed SEO, Google Ads, Meta Ads, and social media campaigns backed by analytics and conversion tracking.",
+    solution:
+      "Executed SEO, Google Ads, Meta Ads, and social media campaigns backed by analytics and conversion tracking.",
     tech: ["Google Ads", "Meta Ads", "Google Analytics"],
     metric: { value: "+250%", label: "Qualified Leads" },
     secondary: { value: "4.8x", label: "ROAS" },
   },
 ];
-
-
 
 const categories = ["All", "Landing Page", "AI", "SEO", "CRM", "Security"] as const;
 
@@ -113,10 +119,12 @@ function ProjectsPage() {
               Our Portfolio
             </span>
             <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-[1.05] md:text-7xl">
-             Building Digital Solutions That Drive Business Growth.
+              Building Digital Solutions That Drive Business Growth.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-              Explore a selection of our expertise across landing pages, AI integration, digital marketing, CRM solutions, SEO optimization, security, and custom web development—crafted to help businesses grow, scale, and succeed.
+              Explore a selection of our expertise across landing pages, AI integration, digital
+              marketing, CRM solutions, SEO optimization, security, and custom web
+              development—crafted to help businesses grow, scale, and succeed.
             </p>
           </Reveal>
 
@@ -147,10 +155,7 @@ function ProjectsPage() {
               <article className="group flex h-full flex-col rounded-3xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:shadow-elegant">
                 <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                   <span>{p.category}</span>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-1 text-foreground"
-                  >
+                  <Link to="/contact" className="inline-flex items-center gap-1 text-foreground">
                     Discuss
                     <ArrowUpRight className="size-3.5" />
                   </Link>

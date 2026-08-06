@@ -150,7 +150,10 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <div className="fixed inset-0 -z-50 bg-mesh animate-mesh dark:opacity-40" aria-hidden="true" />
+        <div
+          className="fixed inset-0 -z-50 bg-mesh animate-mesh dark:opacity-40"
+          aria-hidden="true"
+        />
         <Particles />
         {children}
         <Scripts />

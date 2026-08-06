@@ -28,7 +28,6 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [sent, setSent] = useState(false);
@@ -55,16 +54,10 @@ function ContactPage() {
 
       form.reset();
       setSent(true);
-
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : "Something went wrong."
-      );
+      setError(err instanceof Error ? err.message : "Something went wrong.");
     } finally {
       setLoading(false);
-
     }
   }
   return (
@@ -101,7 +94,9 @@ function ContactPage() {
                   </span>
                   <div>
                     <div className="font-semibold">Location</div>
-                    <div className="text-muted-foreground">65-75 , Kamarajar Nagar , Ondipudhur , Coimbatore-641016</div>
+                    <div className="text-muted-foreground">
+                      65-75 , Kamarajar Nagar , Ondipudhur , Coimbatore-641016
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -185,7 +180,6 @@ function ContactPage() {
                       <button
                         type="submit"
                         disabled={loading}
-
                         className="inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-elegant transition-transform hover:-translate-y-px disabled:cursor-not-allowed"
                       >
                         {loading ? "Sending..." : "Send Message"}

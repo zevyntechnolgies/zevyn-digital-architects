@@ -5,14 +5,8 @@
 // Importing the augmentation file via its package types here guarantees the
 // `declare module '@tanstack/router-core'` block runs once for the project.
 
-import type {
-  AnyRequestMiddleware,
-} from "@tanstack/react-start";
-import type {
-  AnyContext,
-  AnyRoute,
-  Constrain,
-} from "@tanstack/router-core";
+import type { AnyRequestMiddleware } from "@tanstack/react-start";
+import type { AnyContext, AnyRoute, Constrain } from "@tanstack/router-core";
 
 declare module "@tanstack/router-core" {
   interface FilebaseRouteOptionsInterface<
@@ -21,10 +15,10 @@ declare module "@tanstack/router-core" {
     TId extends string = string,
     TPath extends string = string,
     TSearchValidator = undefined,
-    TParams = {},
-    TLoaderDeps extends Record<string, any> = {},
+    TParams extends Record<string, unknown> = Record<string, unknown>,
+    TLoaderDeps extends Record<string, unknown> = Record<string, unknown>,
     TLoaderFn = undefined,
-    TRouterContext = {},
+    TRouterContext extends Record<string, unknown> = Record<string, unknown>,
     TRouteContextFn = AnyContext,
     TBeforeLoadFn = AnyContext,
     TRemountDepsFn = AnyContext,
@@ -34,7 +28,7 @@ declare module "@tanstack/router-core" {
   > {
     server?: {
       middleware?: Constrain<TServerMiddlewares, ReadonlyArray<AnyRequestMiddleware>>;
-      handlers?: any;
+      handlers?: unknown;
     };
   }
 }
